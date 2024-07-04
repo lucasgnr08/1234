@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up</title>
+     
+  </head>
+  <body>
+    <div class="container">
+      <div class="back-img">
+        <div class="logo-img">
+          <img
+            class="logo"
+            src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+            alt=""
+          />
+          <p class="logo-name">Odin</p>
+        </div>
+        <span class="img-footer"
+          >Photo by
+          <a href="photo-1585202900225-6d3ac20a6962.avif" target="_blank"
+            >Job Savelsberg</a
+          >
+          on <a href="photo-1585202900225-6d3ac20a6962.avif" target="_blank">Unsplash</a></span
+        >
+      </div>
+      <div class="content">
+        <div class="paragraph">
+          <p><b>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. </b>
+            <br /><b>
+            Sign up <i>now</i> on our website to get started!
+          </b></p>
+          <p class="mid-paragraph"><b>You <i>know</i> you want to!</b></p>
+        </div>
+        <form action="">
+          <div class="div-form">
+            <label for="fname">FIRST NAME</label><br />
+            <input type="text" id="fname" /><br />
+          </div>
+          <div class="div-form">
+            <label for="lname">LAST NAME</label><br />
+            <input type="text" id="lname" /><br />
+          </div>
+          <div class="div-form">
+            <label for="email">EMAIL</label><br />
+            <input type="email" id="email" /><br />
+          </div>
+          <div class="div-form">
+            <label for="phone">PHONE NUMBER</label><br />
+            <input type="tel" id="phone" /><br />
+          </div>
+          <div class="div-form">
+            <label for="pass">PASSWORD</label><br />
+            <input type="password" id="pass" onkeyup="check();" /><br />
+          </div>
+          <div class="div-form">
+            <label for="confirmpass">CONFIRM PASSWORD</label><br />
+            <input type="password" id="confirmpass" onkeyup="check();" /><br />
+          </div>
+          <span id="message"></span>
+        </form>
+        <div class="button-group">
+          <button>Create account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var check = function () {
+      if (
+        document.getElementById("pass").value !=
+        document.getElementById("confirmpass").value
+      ) {
+        document.getElementById("message").style.display = "inlines"
+        document.getElementById("message").style.color = "red";
+        document.getElementById("message").innerHTML =
+          "*Passwords do not match";
+        document.getElementById("pass").style.borderColor = "red";
+        document.getElementById("confirmpass").style.borderColor = "red";
+      }else{
+        document.getElementById("message").style.display = "none";
+      }
+    };
+  </script>
+</html>
